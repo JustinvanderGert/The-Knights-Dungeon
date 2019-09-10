@@ -16,7 +16,7 @@ public class BasicTile : MonoBehaviour
 
     public void PlayerStanding()
     {
-        CurrentSteps++;
+        //CurrentSteps++;
 
         if (CurrentSteps >= MaxSteps)
         {
