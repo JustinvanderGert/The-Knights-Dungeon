@@ -16,11 +16,12 @@ public class ArrowWall : MonoBehaviour
 
     public IEnumerator ShootArrows()
     {
-        yield return new WaitForSeconds(ReloadTime);
         for (int i = 0; i < Barrels.Count; i++)
         {
             Instantiate(Arrow, Barrels[i].position, gameObject.transform.rotation);
         }
+
+        yield return new WaitForSeconds(ReloadTime);
 
         StartCoroutine(ShootArrows());
     }
