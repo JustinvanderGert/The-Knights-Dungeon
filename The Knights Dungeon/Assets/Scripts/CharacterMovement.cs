@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public delegate void FiredArrows();
+    public FiredArrows MyFiredArrows;
     PlayerManager playerManager;
 
     public BasicTile StandingTile;
@@ -14,6 +16,7 @@ public class CharacterMovement : MonoBehaviour
     {
         playerManager = FindObjectOfType<PlayerManager>();
     }
+    
 
     void Update()
     {
@@ -50,6 +53,7 @@ public class CharacterMovement : MonoBehaviour
                 {
                     EndTile Finish = StandingTile.GetComponent<EndTile>();
                     Finish.ToggleState();
+                    MyFiredArrows();
                 }
             }
         }

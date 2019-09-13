@@ -5,18 +5,30 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     PlayerManager playerManager;
+    CharacterMovement characterMovement;
     GameObject Player;
 
     public float LifeTime;
     public float TravelSpeed;
 
-
-    void Start()
+    private void OnEnable()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         playerManager = Player.GetComponent<PlayerManager>();
+        characterMovement = Player.GetComponent<CharacterMovement>();
 
+        characterMovement.MyFiredArrows += DestroySelf;
+    }
+
+    void Start()
+    {
         StartCoroutine(OnceFired());
+    }
+
+    public void DestroySelf()
+    {
+        characterMovement.MyFiredArrows -= DestroySelf;
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,6 +48,7 @@ public class Arrow : MonoBehaviour
     public IEnumerator OnceFired()
     {
         yield return new WaitForSeconds(LifeTime);
+        characterMovement.MyFiredArrows -= DestroySelf;
         Destroy(gameObject);
     }
 }

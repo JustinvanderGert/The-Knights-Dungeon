@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using UnityEngine.SceneManagement;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {

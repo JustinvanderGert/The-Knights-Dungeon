@@ -5,7 +5,6 @@ using UnityEngine;
 public class PressurePlate : BasicTile
 {
     public List<BasicTile> ConnectedTiles;
-    public string CennectedType;
     public bool State;
 
 

@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 2657932099959947267, guid: 1b3e7657ad2094343b8ebb0f2b80f2ce, type: 3}
   - {fileID: 8006239507111790061, guid: 2c46bea1f1df74d40b64f215356bec7a, type: 3}
   - {fileID: 301724829878375048, guid: 9e0d9f05d8ee0f742b3115a0bd401f35, type: 3}
+  - {fileID: 421785157717301486, guid: 0465bae69c5f3004ea0ccc67e5cd96d5, type: 3}
   RoomSpawnPos: {fileID: 0}
   State: 0
 --- !u!1 &3693926206765475986
