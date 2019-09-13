@@ -53,7 +53,7 @@ public class CharacterMovement : MonoBehaviour
                 {
                     EndTile Finish = StandingTile.GetComponent<EndTile>();
                     Finish.ToggleState();
-                    MyFiredArrows();
+                    MyFiredArrows?.Invoke();
                 }
             }
         }
